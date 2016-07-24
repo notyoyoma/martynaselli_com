@@ -1,0 +1,56 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# gems
+gems:
+  - jekyll-prismic
+
+prismic:
+  endpoint: https://martynasellicom.prismic.io/api
+  access_token: 'MC5WNU9yQVNNQUFLanZoWDNN.77-9B--_ve-_ve-_vXHvv73vv71mSu-_vUPvv73vv73vv71Pau-_vRwj77-9ZSY377-9MFsZ77-977-977-977-9'
+  links:
+    post:
+      permalink: /posts/:slug-:id/
+  # Collections, key is used to access in the site.prismic.collections
+  # template variable
+  collections:
+    # Example for a "posts" collection
+    posts:
+      # Query the documents by type (optional)
+      type: post
+      # Collection name (optional)
+      form: posts
+      # Permalink used to generate the output files. This should match an
+      # entry in "links", so documents link to the right output files
+      permalink: /posts/:slug-:id/
+      # Layout file for this collection
+      layout: prismic_post.html
+      # Additional queries (optional)
+      query:
+        - ["missing", "my.post.allow_comments"]
+      # Order posts in the collection by a fragment (optional)
+      orderings: '[my.post.date desc]'
+      # Generate output files or not (default: false)
+      output: true
+      # Limit output to a number of files, useful for large collections
+      # (optional)
+      output_limit: nil
