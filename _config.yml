@@ -19,8 +19,7 @@ github_username:  jekyll
 markdown: kramdown
 
 # gems
-gems:
-  - jekyll-prismic
+gems: ['jekyll-prismic']
 
 prismic:
   endpoint: 'https://martynasellicom.prismic.io/api'
