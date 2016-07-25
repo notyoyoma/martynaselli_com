@@ -23,23 +23,23 @@ gems:
   - jekyll-prismic
 
 prismic:
-  endpoint: https://martynasellicom.prismic.io/api
+  endpoint: 'https://martynasellicom.prismic.io/api'
   access_token: 'MC5WNU9yQVNNQUFLanZoWDNN.77-9B--_ve-_ve-_vXHvv73vv71mSu-_vUPvv73vv73vv71Pau-_vRwj77-9ZSY377-9MFsZ77-977-977-977-9'
   links:
     post:
-      permalink: /languages/:uid/
+      permalink: '/languages/:uid/'
   # Collections, key is used to access in the site.prismic.collections
   # template variable
   collections:
     # Example for a "posts" collection
     posts:
       # Query the documents by type (optional)
-      type: language
+      type: 'language'
       # Permalink used to generate the output files. This should match an
       # entry in "links", so documents link to the right output files
-      permalink: /languages/:uid/
+      permalink: '/languages/:uid/'
       # Layout file for this collection
-      layout: post.html
+      layout: 'post.html'
       # Additional queries (optional)
       query:
         - ["missing", "my.post.allow_comments"]
