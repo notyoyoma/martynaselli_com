@@ -32,7 +32,7 @@ prismic:
   # template variable
   collections:
     # Example for a "posts" collection
-    posts:
+    languages:
       # Query the documents by type (optional)
       type: 'language'
       # Permalink used to generate the output files. This should match an
@@ -40,11 +40,6 @@ prismic:
       permalink: '/languages/:uid/'
       # Layout file for this collection
       layout: 'post.html'
-      # Additional queries (optional)
-      query:
-        - ["missing", "my.post.allow_comments"]
-      # Order posts in the collection by a fragment (optional)
-      orderings: '[my.post.date desc]'
       # Generate output files or not (default: false)
       output: true
       # Limit output to a number of files, useful for large collections
