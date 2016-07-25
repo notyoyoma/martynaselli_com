@@ -35,10 +35,11 @@ prismic:
     languages:
       # Query the documents by type (optional)
       type: 'language'
+      form: 'languages'
       # Permalink used to generate the output files. This should match an
       # entry in "links", so documents link to the right output files
       permalink: '/languages/:uid/'
-      # Layout file for this collection
+      # Layout file for poststhis collection
       layout: 'post.html'
       # Generate output files or not (default: false)
       output: true
