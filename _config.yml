@@ -34,8 +34,8 @@ prismic:
     # Example for a "posts" collection
     languages:
       # Query the documents by type (optional)
-      type: 'language'
-      form: 'languages'
+      type: language
+      form: languages
       # Permalink used to generate the output files. This should match an
       # entry in "links", so documents link to the right output files
       permalink: '/languages/:uid/'
